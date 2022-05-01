@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-none",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "description": "Test whether all iterated values are falsy.",
   "license": "Apache-2.0",
   "author": {
