@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@deno/mod.js';
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.1.0-deno/mod.js';
 ```
 
 #### iterNone( iterator )
@@ -100,7 +100,7 @@ var bool = iterNone( array2iterator( [] ) );
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
 import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@deno/mod.js';
-import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@deno/mod.js';
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.1.0-deno/mod.js';
 
 function threshold( r ) {
     return ( r > 0.95 );
