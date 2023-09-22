@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-none/tags). For example,
+
+```javascript
 import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.1.0-esm/index.mjs';
 ```
 
@@ -105,7 +110,7 @@ var bool = iterNone( array2iterator( [] ) );
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
 import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@esm/index.mjs';
-import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.1.0-esm/index.mjs';
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@esm/index.mjs';
 
 function threshold( r ) {
     return ( r > 0.95 );
