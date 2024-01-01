@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/iter-none
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var iterNone = require( '@stdlib/iter-none' );
+iterNone = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var iterNone = require( 'path/to/vendor/umd/iter-none/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.iterNone;
+})();
+</script>
 ```
 
 #### iterNone( iterator )
@@ -113,10 +121,15 @@ var bool = iterNone( array2iterator( [] ) );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-iter-randu' );
-var iterMap = require( '@stdlib/iter-map' );
-var iterNone = require( '@stdlib/iter-none' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 function threshold( r ) {
     return ( r > 0.95 );
@@ -136,6 +149,11 @@ var bool = iterNone( miter );
 // returns <boolean>
 
 console.log( bool );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -241,15 +259,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/iter/any]: https://github.com/stdlib-js/iter-any
+[@stdlib/iter/any]: https://github.com/stdlib-js/iter-any/tree/umd
 
-[@stdlib/iter/every]: https://github.com/stdlib-js/iter-every
+[@stdlib/iter/every]: https://github.com/stdlib-js/iter-every/tree/umd
 
-[@stdlib/iter/for-each]: https://github.com/stdlib-js/iter-for-each
+[@stdlib/iter/for-each]: https://github.com/stdlib-js/iter-for-each/tree/umd
 
-[@stdlib/iter/none-by]: https://github.com/stdlib-js/iter-none-by
+[@stdlib/iter/none-by]: https://github.com/stdlib-js/iter-none-by/tree/umd
 
-[@stdlib/iter/some]: https://github.com/stdlib-js/iter-some
+[@stdlib/iter/some]: https://github.com/stdlib-js/iter-some/tree/umd
 
 <!-- </related-links> -->
 
