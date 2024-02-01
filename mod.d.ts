@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,22 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var isIteratorLike = require( '@stdlib/assert-is-iterator-like' );
-var format = require( '@stdlib/string-format' );
-
-
-// MAIN //
+import { Iterator } from '@stdlib/types/iter';
 
 /**
 * Tests whether all iterated values are falsy.
 *
-* @param {Iterator} iterator - input iterator
-* @throws {TypeError} must provide an iterator
-* @returns {boolean} boolean indicating whether all iterated values are falsy
+* @param iterator - input iterator
+* @returns boolean indicating whether all iterated values are falsy
 *
 * @example
 * var array2iterator = require( '@stdlib/array-to-iterator' );
@@ -41,23 +36,9 @@ var format = require( '@stdlib/string-format' );
 * var bool = iterNone( it );
 * // returns false
 */
-function iterNone( iterator ) {
-	var v;
-	if ( !isIteratorLike( iterator ) ) {
-		throw new TypeError( format( 'invalid argument. Must provide an iterator. Value: `%s`.', iterator ) );
-	}
-	while ( true ) {
-		v = iterator.next();
-		if ( v.done ) {
-			return true;
-		}
-		if ( v.value ) {
-			return false;
-		}
-	}
-}
+declare function iterNone( iterator: Iterator ): boolean;
 
 
 // EXPORTS //
 
-module.exports = iterNone;
+export = iterNone;
