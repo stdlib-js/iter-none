@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-none/tags). For example,
+
+```javascript
 import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.2.0-deno/mod.js';
 ```
 
@@ -100,7 +105,7 @@ var bool = iterNone( array2iterator( [] ) );
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
 import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@deno/mod.js';
-import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@v0.2.0-deno/mod.js';
+import iterNone from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-none@deno/mod.js';
 
 function threshold( r ) {
     return ( r > 0.95 );
